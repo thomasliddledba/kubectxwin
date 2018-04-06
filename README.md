@@ -90,5 +90,5 @@ $ ./PS2EXE-GUI/ps2exe.ps1 -inputfile kubectxwin.ps1 -output bin/kubectxwin.exe
 # Thanks
 * Markus Scholtes - [PS2EXE-GUI](https://gallery.technet.microsoft.com/scriptcenter/PS2EXE-GUI-Convert-e7cb69d5)
 * Ingo Karstein - [PS2EXE](https://gallery.technet.microsoft.com/scriptcenter/PS2EXE-Convert-PowerShell-9e4e07f1)
-* [Jon Mosco](https://github.com/jonmosco) - Late night discussion about doing this weekend project.  Check out kube-ps1 by Jon! Maybe a Windows version????
+* [Jon Mosco](https://github.com/jonmosco) - Late night discussion about doing this weekend project.  Check out [kube-ps1](https://github.com/jonmosco/kube-ps1) by Jon! Maybe a Windows version????
 * Ahmet Alp Balkan - [kubectx](https://github.com/ahmetb/kubectx) - Writing the inital code for kubectx and giving me the idea to extend to Windows for us Windows guys based on this [Issue #29](https://github.com/ahmetb/kubectx/issues/29)
