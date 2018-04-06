@@ -1,0 +1,50 @@
+PS2EXE
+
+Script to convert powershell scripts to standalone executables
+
+Assuming "ps2exe.ps1" and a scoure script "source.ps1" are in the current directory,
+  .\ps2exe.ps1 .\source.ps1 .\target.exe
+compiles "source.ps1" into the executable target.exe
+
+
+Usage:
+
+ps2exe.ps1 [-inputFile] '<file_name>' [-outputFile] '<file_name>'
+           [-verbose] [-debug] [-runtime20|-runtime40] [-lcid <id>] [-x86|-x64] [-Sta|-Mta]
+           [-noConsole] [-iconFile '<file_name>']"
+
+-inputFile 		Powershell script that you want to convert to executable
+-outputFile 	destination executable file name
+-verbose 			output verbose informations - if any
+-debug 				generate debug informations for output file
+-runtime20 		this switch forces PS2EXE to create a config file for the generated executable that contains the
+              "supported .NET Framework versions" setting for .NET Framework 2.0/3.x for PowerShell 2.0
+-runtime40 		this switch forces PS2EXE to create a config file for the generated executable that contains the
+              "supported .NET Framework versions" setting for .NET Framework 4.x for PowerShell 3.0 or higher
+-lcid 				location ID for the compiled executable. Current user culture if not specified
+-x86 					compile for 32-bit runtime only
+-x64 					compile for 64-bit runtime only
+-sta 					Single Thread Apartment Mode
+-mta 					Multi Thread Apartment Mode
+-noConsole 		the resulting executable file will be a Windows Forms app without a console window
+-iconFile 		icon file name for the compiled executable
+-title 				title information (displayed in details tab of Windows Explorer's properties dialog)
+-description 	description information (not displayed, but embedded in executablecutable)
+-company 			company information (not displayed, but embedded in executablecutable)
+-product 			product information (displayed in details tab of Windows Explorer's properties dialog)
+-copyright 		copyright information (displayed in details tab of Windows Explorer's properties dialog)
+-trademark 		trademark information (displayed in details tab of Windows Explorer's properties dialog)
+-version 			version information (displayed in details tab of Windows Explorer's properties dialog)
+-requireAdmin if UAC is enabled, compiled executable run only in elevated context (UAC dialog appears if required)
+-virtualize   application virtualization is activated (forcing x86 runtime)
+
+
+
+A generated executables has the following reserved parameters:
+
+-debug              Forces the executable to be debugged. It calls "System.Diagnostics.Debugger.Break()".
+-extract:<FILENAME> Extracts the powerShell script inside the executable and saves it as FILENAME.
+                    The script will not be executed.
+-wait               At the end of the script execution it writes "Hit any key to exit..." and waits for a key to be pressed.
+-end                All following options will be passed to the script inside the executable.
+                    All preceding options are used by the executable itself and will not be passed to the script.
