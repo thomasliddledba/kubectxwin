@@ -10,11 +10,11 @@
 function usage() {
   Write-Output "
       Usage 
-        kubectx                        : current context
-        kubectx ls                     : list the contexts
-        kubectx set <name>             : switch to context <name>
-        kubectx rn <oldname> <newname> : rename context <oldname> <newname>
-        kubectx help                   : display usage"
+        kubectxwin                        : current context
+        kubectxwin ls                     : list the contexts
+        kubectxwin set <name>             : switch to context <name>
+        kubectxwin rn <oldname> <newname> : rename context <oldname> <newname>
+        kubectxwin help                   : display usage"
 }
 
 function current_context() {

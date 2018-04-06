@@ -1,47 +1,59 @@
-# kubectx
+# kubectxwin
 Windows Version of the powerful tool kubectx
 
 ```console
       Usage
-        kubectx                        : current context
-        kubectx ls                     : list the contexts
-        kubectx set <name>             : switch to context <name>
-        kubectx rn <oldname> <newname> : rename context <oldname> <newname>
-        kubectx help                   : display usage
+        kubectxwin                        : current context
+        kubectxwin ls                     : list the contexts
+        kubectxwin set <name>             : switch to context <name>
+        kubectxwin rn <oldname> <newname> : rename context <oldname> <newname>
+        kubectxwin help                   : display usage
 ```
+
+## Tests
+| OS | Success |
+| --- | --- |
+| Windows 10 | Yes |
+| Windows 2012 R2 | Yes |
+| Windows 2016 | N/A |
+| Windows 7 | N/A |
+| Windows 2008 R2 | N/A |
+
+>Note `N/A` = Haven't tested yet
+
 ## Prerequisites
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-chocolatey-on-windows)
 
 ### Chocolatey
-You can install the kubectl client via Chocolatey.  This is the recommended way based on the [kubernetes.io docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-chocolatey-on-windows).
+You can install the kubectl client via [Chocolatey](http://chocolatey.org).  This is the recommended way based on the [kubernetes.io docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-chocolatey-on-windows).
 ```console
 $ choco install kubernetes-cli
 ```
 
 ## Usage
 ```console
-$ kubectx.exe ls
+$ kubectxwin ls
 * minikube
 mydevcluster
 sandbox
 
-$ kubectx.exe set sandbox
+$ kubectxwin set sandbox
 Switched to context "sandbox".
 
-$ kubectx.exe rn sandbox sandbox-old
+$ kubectxwin rn sandbox sandbox-old
 Context "sandbox" renamed to "sandbox-old".
 
-$ kubectx.exe ls
+$ kubectxwin ls
 minikube
 mydevcluster
 * sandbox
 
-$ kubectx
+$ kubectxwin
 sandbox
 ```
 
 # Installation
-You will need to ensure you put `kubectx.exe` in a directory in your $PATH.  To see what directories you can put it in use the following command.
+You will need to ensure you put `kubectxwin.exe` in a directory in your $PATH.  To see what directories you can put it in use the following command.
 
 In a Windows Command Prompt
 ```console
@@ -54,9 +66,12 @@ PS> Get-ChildItem Env:
 ```
 
 ## Things to Note
-kubectx for Windows is actually a powershell script that was converted using [`PS2EXE-GUI`](https://gallery.technet.microsoft.com/scriptcenter/PS2EXE-GUI-Convert-e7cb69d5).  I have saved the copy of PS2EXE-GUI that I used in this repo.
+kubectxwin for Windows is actually a powershell script that was converted using [`PS2EXE-GUI`](https://gallery.technet.microsoft.com/scriptcenter/PS2EXE-GUI-Convert-e7cb69d5).  I have saved the copy of PS2EXE-GUI that I used in this repo.
 
-This allows users and developers to use different methods of kubectx for Windows.  For example, if you want just to use the Powershell script or convert it to a PowerShell modeule, you can do that.  By default, I provide the `.exe` because that is useful to me.  However, feel free to use it anyway you like and please CONTRIBUTE with new features and funtionaility. 
+This allows users and developers to use different methods of kubectxwin for Windows.  For example, if you want just to use the Powershell script or convert it to a PowerShell module, you can do that.  By default, I provide the `.exe` because that is useful to me.  However, feel free to use it anyway you like and please CONTRIBUTE with new features and funtionaility. 
+
+## How to Contribute
+I'd love for anyone to contribute.  Please read the [CONTRIBUTING.md](CONTRIBUTING.md) document for more information.
 
 ## How to compile
 
@@ -67,9 +82,9 @@ This allows users and developers to use different methods of kubectx for Windows
 
 Open a Powershell command with `Run as administrator`
 ```powershell
-$ git clone https://github.com/thomasliddledba/kubectx.git <working directory>
-$ cd <working directory>/kubectx
-$ ./PS2EXE-GUI/ps2exe.ps1 -inputfile kubectx.ps1 -output bin/kubectx.exe
+$ git clone https://github.com/thomasliddledba/kubectxwin.git <working directory>
+$ cd <working directory>/kubectxwin
+$ ./PS2EXE-GUI/ps2exe.ps1 -inputfile kubectxwin.ps1 -output bin/kubectxwin.exe
 ```
 
 # Thanks
