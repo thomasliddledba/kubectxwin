@@ -61,6 +61,7 @@ Open a Powershell command with `Run as administrator`
 $ git clone https://github.com/thomasliddledba/kubectx.git <working directory>
 $ cd <working directory>/kubectx
 $ ./PS2EXE-GUI/ps2exe.ps1 -inputfile kubectx.ps1 -output kubectx1.exe
+```
 
 # Thanks
 * Markus Scholtes - [PS2EXE-GUI](https://gallery.technet.microsoft.com/scriptcenter/PS2EXE-GUI-Convert-e7cb69d5)
