@@ -69,7 +69,7 @@ Open a Powershell command with `Run as administrator`
 ```powershell
 $ git clone https://github.com/thomasliddledba/kubectx.git <working directory>
 $ cd <working directory>/kubectx
-$ ./PS2EXE-GUI/ps2exe.ps1 -inputfile kubectx.ps1 -output kubectx1.exe
+$ ./PS2EXE-GUI/ps2exe.ps1 -inputfile kubectx.ps1 -output bin/kubectx.exe
 ```
 
 # Thanks
