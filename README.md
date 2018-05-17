@@ -23,6 +23,7 @@ Windows Version of the powerful tool [kubectx](https://github.com/ahmetb/kubectx
 
 ## Prerequisites
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-chocolatey-on-windows)
+* [kubenswin](https://github.com/thomasliddledba/kubenswin)
 
 ### Chocolatey
 You can install the kubectl client via [Chocolatey](http://chocolatey.org).  This is the recommended way based on the [kubernetes.io docs](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-chocolatey-on-windows).
