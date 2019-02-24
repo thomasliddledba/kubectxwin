@@ -14,11 +14,16 @@ function usage() {
         kubectxwin ls                     : list the contexts
         kubectxwin set <name>             : switch to context <name>
         kubectxwin rn <oldname> <newname> : rename context <oldname> <newname>
+        kubectxwin rm <name>              : delete context <name>
         kubectxwin help                   : display usage"
 }
 
 function current_context() {
     kubectl config view -o=jsonpath='{.current-context}'
+}
+
+function delete_context() {
+    kubectl config delete-context $name
 }
 
 function rename_context() {
@@ -52,6 +57,7 @@ function main() {
         Default { current_context }
         ls { list_contexts }
         rn { rename_context }
+        rm { delete_context }
         help { usage }
     }
 }
