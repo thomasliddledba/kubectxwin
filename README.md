@@ -9,6 +9,7 @@ Windows Version of the powerful tool [kubectx](https://github.com/ahmetb/kubectx
         kubectxwin ls                     : list the contexts
         kubectxwin set <name>             : switch to context <name>
         kubectxwin rn <oldname> <newname> : rename context <oldname> <newname>
+        kubectxwin rm <name>              : delete context <name>
         kubectxwin help                   : display usage
 ```
 
