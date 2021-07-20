@@ -52,6 +52,10 @@ sandbox
 $ kubectxwin set sandbox
 Switched to context "sandbox".
 
+$ kubectxwin set 'n/a'
+Context "no-context" modified.
+Switched to context "no-context".
+
 $ kubectxwin rn sandbox sandbox-old
 Context "sandbox" renamed to "sandbox-old".
 

@@ -12,10 +12,11 @@ function usage() {
       Usage 
         kubectxwin                        : current context
         kubectxwin ls                     : list the contexts
-        kubectxwin set <name>             : switch to context <name>
+        kubectxwin set <name> | 'n/a'     : switch context Note: 'n/a' will create/set a new empty context
         kubectxwin rn <oldname> <newname> : rename context <oldname> <newname>
         kubectxwin rm <name>              : delete context <name>
-        kubectxwin help                   : display usage"
+        kubectxwin help                   : display usage
+        "
 }
 
 function current_context() {
@@ -48,7 +49,14 @@ function list_contexts() {
 }
 
 function switch_context($context) {
-    kubectl config use-context $context
+    if ($context -eq 'n/a') {
+        kubectl config set-context no-context
+        kubectl config use-context no-context
+    }
+    else {
+        kubectl config use-context $context
+    }
+    
 }
 
 function main() {
